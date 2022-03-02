@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TicTacToe.MainPage">
+
+    <StackLayout>
+        <Grid HorizontalOptions="Center" Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Text="First player" x:Name="firstPlayerLabel" HorizontalOptions="Start" />
+            <Label Grid.Column="1" Text="0" x:Name="firstPlayerLabelScore" HorizontalOptions="Center"/>
+            <Label Grid.Column="2" Text="SCORE" x:Name="scoreLabel" HorizontalOptions="Center" />
+            <Label Grid.Column="3" Text="0" x:Name="secondPlayerLabelScore" HorizontalOptions="Center"/>
+            <Label Grid.Column="4" Text="Second player" x:Name="secondPlayerLabel" HorizontalOptions="End" />
+        </Grid>
+        <ContentView >
+            <StackLayout>
+                <Grid HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100" />
+                    </Grid.RowDefinitions>
+                    <Button Grid.Column="0" x:Name="btn11" Clicked="OnBtnClick" />
+                    <Button Grid.Column="1" x:Name="btn12" Clicked="OnBtnClick" />
+                    <Button Grid.Column="2" x:Name="btn13" Clicked="OnBtnClick" />
+                </Grid>
+
+                <Grid HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100" />
+                    </Grid.RowDefinitions>
+
+                    <Button Grid.Column="0" x:Name="btn21" Clicked="OnBtnClick" />
+                    <Button Grid.Column="1" x:Name="btn22" Clicked="OnBtnClick" />
+                    <Button Grid.Column="2" x:Name="btn23" Clicked="OnBtnClick" />
+                </Grid>
+
+                <Grid HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100" />
+                    </Grid.RowDefinitions>
+
+                    <Button Grid.Column="0" x:Name="btn31" Clicked="OnBtnClick" />
+                    <Button Grid.Column="1" x:Name="btn32" Clicked="OnBtnClick" />
+                    <Button Grid.Column="2" x:Name="btn33" Clicked="OnBtnClick" />
+                </Grid>
+            </StackLayout>
+        </ContentView>
+        <ContentView >
+            <StackLayout>
+                <Grid HorizontalOptions="Center" VerticalOptions="End">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" />
+                    </Grid.RowDefinitions>
+                    <Button Grid.Column="0" Text="Reset round" x:Name="resetFileds" Clicked="ResetFieldsClick" />
+                    <Button Grid.Column="1" Text="Reset game" x:Name="resetGame" Clicked="ResetGameClick" />
+                    <Button Grid.Column="2" Text="Play with android" x:Name="playWithAndroidBtn" Clicked="PlayWithAndroidClick" />
+                </Grid>
+                <Label Text="WHO WINS?" x:Name="whoWinsLabel" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </ContentView>
+    </StackLayout>
+</ContentPage>
+
